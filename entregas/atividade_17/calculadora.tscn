@@ -1,0 +1,69 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpdllje7p5x80"]
+
+[ext_resource type="Script" uid="uid://cdcqhevb5jiah" path="res://atividade_17/calculadora.gd" id="1_j4evd"]
+
+[node name="Calculadora" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_right = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j4evd")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.003
+anchor_right = 0.003
+offset_left = 545.544
+offset_top = 68.0
+offset_right = 676.544
+offset_bottom = 134.0
+text = "executar"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 82.0
+offset_right = 390.0
+offset_bottom = 154.0
+text = "exiba resultado"
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 26.0
+offset_top = -1.0
+offset_right = 274.0
+offset_bottom = 59.0
+text = "insira o primeiro número"
+
+[node name="TextEdit2" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 281.0
+offset_right = 538.0
+offset_bottom = 60.0
+text = "insira o segundo número"
+
+[node name="OptionButton" type="OptionButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.06
+anchor_bottom = 0.091
+offset_left = 548.0
+offset_top = 3.0
+offset_right = 608.88
+offset_bottom = 0.0319977
+item_count = 4
+popup/item_0/text = "adição"
+popup/item_0/id = 0
+popup/item_1/text = "subtração"
+popup/item_1/id = 1
+popup/item_2/text = "multiplicação"
+popup/item_2/id = 2
+popup/item_3/text = "divisão"
+popup/item_3/id = 3
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
