@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://il55e1ehyvq7"]
+
+[ext_resource type="Script" uid="uid://drravexxomw5n" path="res://atividade_18/progress_bar.gd" id="1_lftb4"]
+[ext_resource type="Texture2D" uid="uid://bjqfwep4tbo73" path="res://atividade_18/circle-regular-full (2).svg" id="2_gkd8x"]
+[ext_resource type="Texture2D" uid="uid://ck3nrn3qdwbrk" path="res://atividade_18/circle-regular-full (3).svg" id="3_rhd2i"]
+
+[node name="ProgressBar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lftb4")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_left = 218.0
+offset_right = 858.0
+offset_bottom = 640.0
+value = 10.0
+fill_mode = 4
+texture_under = ExtResource("3_rhd2i")
+texture_progress = ExtResource("2_gkd8x")
+
+[node name="Label" type="Label" parent="TextureProgressBar"]
+layout_mode = 0
+offset_left = 258.0
+offset_top = 179.0
+offset_right = 372.0
+offset_bottom = 452.0
+theme_override_font_sizes/font_size = 200
+text = "1"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_font_sizes/font_size = 50
+text = "10%"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="value_changed" from="TextureProgressBar" to="." method="_on_texture_progress_bar_value_changed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
