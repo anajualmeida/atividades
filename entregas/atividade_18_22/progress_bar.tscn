@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://il55e1ehyvq7"]
 
-[ext_resource type="Script" uid="uid://drravexxomw5n" path="res://atividade_18/progress_bar.gd" id="1_lftb4"]
-[ext_resource type="Texture2D" uid="uid://bjqfwep4tbo73" path="res://atividade_18/circle-regular-full (2).svg" id="2_gkd8x"]
-[ext_resource type="Texture2D" uid="uid://ck3nrn3qdwbrk" path="res://atividade_18/circle-regular-full (3).svg" id="3_rhd2i"]
+[ext_resource type="Script" uid="uid://drravexxomw5n" path="res://atividade_18_22/progress_bar.gd" id="1_lftb4"]
+[ext_resource type="Texture2D" uid="uid://bjqfwep4tbo73" path="res://atividade_18_22/circle-regular-full (2).svg" id="2_gkd8x"]
+[ext_resource type="Texture2D" uid="uid://ck3nrn3qdwbrk" path="res://atividade_18_22/circle-regular-full (3).svg" id="3_rhd2i"]
 
 [sub_resource type="Curve" id="Curve_gkd8x"]
 _limits = [-200.0, 200.0, 0.0, 1.0]
@@ -59,7 +59,7 @@ theme_override_font_sizes/font_size = 50
 text = "50%"
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
-position = Vector2(543, 325)
+position = Vector2(538, 324)
 emitting = false
 amount = 200
 lifetime = 2.0

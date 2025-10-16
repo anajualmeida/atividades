@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjqfwep4tbo73"
-path="res://.godot/imported/circle-regular-full (2).svg-8ceb0ce17b2b75e7284eeca324b35ee7.ctex"
+uid="uid://couqd1jgdr2mu"
+path="res://.godot/imported/Death.png-e5109d5d76ca1326ee8f9068cebb91b1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://atividade_18/circle-regular-full (2).svg"
-dest_files=["res://.godot/imported/circle-regular-full (2).svg-8ceb0ce17b2b75e7284eeca324b35ee7.ctex"]
+source_file="res://atividade_23/7 Bird/Death.png"
+dest_files=["res://.godot/imported/Death.png-e5109d5d76ca1326ee8f9068cebb91b1.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false
