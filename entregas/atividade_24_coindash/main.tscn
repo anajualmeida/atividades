@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://bu524k6oe2xl"]
+
+[ext_resource type="Script" uid="uid://bepr238vuiayh" path="res://atividade_24_coindash/main.gd" id="1_a8q1j"]
+[ext_resource type="Texture2D" uid="uid://e6of5kiy6h42" path="res://atividade_24_coindash/assets/grass.png" id="2_fs1sr"]
+[ext_resource type="PackedScene" uid="uid://dlh8spmybyac1" path="res://atividade_24_coindash/player.tscn" id="2_xjvmd"]
+[ext_resource type="PackedScene" uid="uid://b65vjyw4pfax3" path="res://atividade_24_coindash/coin.tscn" id="4_btxvo"]
+
+[node name="main" type="Node"]
+script = ExtResource("1_a8q1j")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_fs1sr")
+stretch_mode = 1
+
+[node name="Player" parent="." instance=ExtResource("2_xjvmd")]
+
+[node name="coin" parent="." instance=ExtResource("4_btxvo")]
+position = Vector2(206, 141)
