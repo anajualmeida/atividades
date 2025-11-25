@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ck3nrn3qdwbrk"
-path="res://.godot/imported/circle-regular-full (3).svg-a904e88e8b94675cf8121ebdcae587a5.ctex"
+uid="uid://dnw8u5cfyt1r4"
+path="res://.godot/imported/calf_shadow.png-8a95cfa8d209fb013308784051fbf74b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://atividade_18/circle-regular-full (3).svg"
-dest_files=["res://.godot/imported/circle-regular-full (3).svg-a904e88e8b94675cf8121ebdcae587a5.ctex"]
+source_file="res://atividade_24/personagens/Without_shadow/Shadows/calf_shadow.png"
+dest_files=["res://.godot/imported/calf_shadow.png-8a95cfa8d209fb013308784051fbf74b.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

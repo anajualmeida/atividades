@@ -1,0 +1,81 @@
+[gd_scene load_steps=7 format=3 uid="uid://il55e1ehyvq7"]
+
+[ext_resource type="Script" uid="uid://drravexxomw5n" path="res://atividade_18_22/progress_bar.gd" id="1_lftb4"]
+[ext_resource type="Texture2D" uid="uid://bjqfwep4tbo73" path="res://atividade_18_22/circle-regular-full (2).svg" id="2_gkd8x"]
+[ext_resource type="Texture2D" uid="uid://ck3nrn3qdwbrk" path="res://atividade_18_22/circle-regular-full (3).svg" id="3_rhd2i"]
+
+[sub_resource type="Curve" id="Curve_gkd8x"]
+_limits = [-200.0, 200.0, 0.0, 1.0]
+_data = [Vector2(0, 141.573), 0.0, 0.0, 0, 0, Vector2(1, 11.236), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_rhd2i"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.303371), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_0pem2"]
+colors = PackedColorArray(0.834699, 0.297111, 0.413359, 1, 0.329612, 0.419198, 0.966917, 1)
+
+[node name="ProgressBar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lftb4")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_left = 218.0
+offset_right = 858.0
+offset_bottom = 640.0
+fill_mode = 4
+texture_under = ExtResource("3_rhd2i")
+texture_progress = ExtResource("2_gkd8x")
+
+[node name="Label" type="Label" parent="TextureProgressBar"]
+layout_mode = 0
+offset_left = 258.0
+offset_top = 179.0
+offset_right = 372.0
+offset_bottom = 452.0
+theme_override_font_sizes/font_size = 200
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 68.0
+offset_right = 165.0
+offset_bottom = 145.0
+theme_override_font_sizes/font_size = 50
+text = "50%"
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(538, 324)
+emitting = false
+amount = 200
+lifetime = 2.0
+one_shot = true
+explosiveness = 1.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 30.0
+initial_velocity_max = 100.0
+radial_accel_max = 25.0
+radial_accel_curve = SubResource("Curve_gkd8x")
+scale_amount_min = 8.0
+scale_amount_max = 16.0
+scale_amount_curve = SubResource("Curve_rhd2i")
+color_initial_ramp = SubResource("Gradient_0pem2")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="value_changed" from="TextureProgressBar" to="." method="_on_texture_progress_bar_value_changed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
